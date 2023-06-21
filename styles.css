@@ -1,0 +1,299 @@
+:root {
+    --primary-color: #FFFBF7;
+    --primary-background: #003737;
+    --primary-color-2: #8FA0B2;
+    --primary-background-2: #023232;
+    --secondary-color: #DFEAF6;
+    --secondary-background: #698db3;
+    --secondary-color-2: #C4DDF7;
+    --secondary-background-2: #006A6A;
+    
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+body {
+    background: var(--primary-background);
+    color: var(--primary-color);
+    overflow-x: hidden;
+    font-size: 1.2rem;
+}
+h1 {
+    font-size: 3rem;
+}
+
+.animated * {
+    position: absolute;
+}
+
+.animated {
+    width: 40vw; 
+    height: 100vh;
+    background: linear-gradient(
+        90deg,
+        var(--primary-background) 15%,
+        var(--secondary-background-2) 50%,
+        var(--primary-background) 85%
+    );
+    position: relative;
+}
+.drop {
+    width: 12px;
+    height: 12px;
+    top: -50%;
+    left: calc(50% - 6px);
+    border-radius: 50%;
+    background: aqua;
+    animation: fall 3s linear infinite;
+}
+.stamp {
+    border: 1px solid aqua;
+    width: 10px;
+    height: 5px;
+    left: calc(50% - 5px);
+    top: 83%;
+    border-radius: 50%;
+    transform: scaleY(0.5);
+    animation: waves 3s linear infinite;
+}
+.stamp.second {
+    width: 16px;
+    height: 7px;
+    left: calc(50% - 8px);
+}
+@keyframes fall {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    5% {  
+        opacity: 0;
+        top: -10%;
+    }
+    25% {   
+        display: block;
+        opacity: 0.3;
+        transform: scaleY(2.5);
+    }
+    50% {
+        top: 80%;
+        transform: scaleY(1);
+    }
+    60% {
+        top: 78%;
+        transform: scaleY(1);
+    }
+    80% {
+        top:82%;
+        opacity: 0;
+        display: none;
+    }
+    90% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes waves {
+    0% {
+        opacity: 0;
+    }
+    50% {   
+        opacity: 0;
+        transform: scaleX(1);
+    }
+    52% {   
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(15);
+    }
+}
+
+
+#navbar {
+    background-color: var(--secondary-background);
+    color: var(--primary-background-2);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    z-index: 1000;
+}
+#navbar a {
+    color: var(--primary-background-2);
+    text-decoration: none;
+    display: flexbox;
+    padding: 5px 10px;
+}
+#navbar a:hover {
+    background-color: var(--secondary-background-2);
+    color: var(--secondary-color-2);
+}
+
+section {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+h2 {
+    color: var(--secondary-color-2);
+    font-size: 3rem;
+}
+h3 {
+    color: var(--secondary-background);
+    font-size: 2.4rem;
+}
+
+/* welcome-section */
+#welcome-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-text {
+    max-width: 50vw;
+    
+}
+
+/* project-section */
+#project {
+    background: var(--primary-background-2);
+    padding: 10% 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#project-board {
+    width: 80%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.tile {
+   width: 300px;
+   height: 300px;
+   background-size: cover;
+}
+.tile .title {
+    background-color: rgb(2, 50, 50, 0.9);
+    padding: 10px;
+    margin-top: 70%;
+    text-align: end;
+    }
+a.project-link {
+    cursor: pointer;
+    color: var(--secondary-color);
+
+}
+a#more-project {
+    color: var(--primary-background);
+    background-color: var(--secondary-background);
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 2px solid  var(--secondary-background);
+}
+a#more-project:hover {
+    color: var(--secondary-background);
+    background-color: var(--primary-background);
+}
+
+#sinoptik {
+    background-image: url(img/sinoptik-site.png);
+}
+#survey {
+    background-image: url(img/survey-p.png);
+}
+#tribute {
+    background-image: url(img/tribute-p.png);
+}
+#coffee {
+    background-image: url(img/coffee-pp.png);
+}
+#caterpillar {
+    background-image: url(img/Hungry-Caterpillar.png);
+}
+#ukrainian {
+    background-image: url(img/ukrainian.png);
+}
+
+/* project-section */
+#contact {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--primary-background) 5%,
+        var(--secondary-background-2) 17%,
+        var(--primary-background) 21%,
+        var(--primary-background-2) 27%,
+        var(--secondary-background) 29%,
+        var(--primary-background) 30%
+    );
+    padding: 10% 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#socials {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+   
+}
+#socials a {
+    margin: 0 20px;
+    padding: 20px 25px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: box;
+}
+
+#socials a:hover {
+    color: var(--secondary-color);
+    padding: 10px 25px 30px;
+    text-shadow: 3px 2px 5px var(--primary-background-2);
+}
+footer {
+    padding: 20px;
+    border-top: 2px solid var(--secondary-background);
+    color: var(--secondary-color-2);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) { 
+    .animated {
+       position: absolute;
+       z-index: -1;
+    }
+    .welcome-text {
+        max-width: 80vw;
+        text-align: center;
+        
+    }
+
+    
+}
