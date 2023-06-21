@@ -134,7 +134,7 @@ h1 {
     color: var(--primary-background-2);
     text-decoration: none;
     display: flexbox;
-    padding: 5px 10px;
+    padding: 20px 10px;
 }
 #navbar a:hover {
     background-color: var(--secondary-background-2);
@@ -250,6 +250,7 @@ a#more-project:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 #socials {
     margin: 40px;
